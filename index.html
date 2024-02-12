@@ -56,19 +56,19 @@
         <figure><img src="./images/rectangle.png" alt="Shoes" /></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Rectangle</h2>
-          <p>Area (A) = w * I</p>
+          <p>Area (A) = w x l</p>
           <div class="flex gap-2">
             <label for="">
-              <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
+              <input id="rectangleWidth" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="w">
               <span>cm</span>
             </label>
             <label for="">
-              <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="h">
+              <input id="rectangleLength" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="l">
               <span>cm</span>
             </label>
           </div>
           <div class="card-actions justify-end mt-6 w-full">
-            <button class="btn btn-primary w-full text-xl">Calculate</button>
+            <button onclick="rectangleCalculation()" class="btn btn-primary w-full text-xl">Calculate</button>
           </div>
         </div>
       </div>
