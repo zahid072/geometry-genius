@@ -38,16 +38,16 @@
           <p>Area (A) = 0.5 b h</p>
           <div class="flex gap-2">
             <label for="">
-              <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
+              <input id="triangleBase" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
               <span>cm</span>
             </label>
             <label for="">
-              <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="h">
+              <input id="triangleHeight" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="h">
               <span>cm</span>
             </label>
           </div>
           <div class="card-actions justify-end mt-6 w-full">
-            <button class="btn btn-primary w-full text-xl">Calculate</button>
+            <button onclick="triangleCalculate()" class="btn btn-primary w-full text-xl">Calculate</button>
           </div>
         </div>
       </div>
@@ -160,6 +160,10 @@
     </div>
     <div class="border rounded-xl p-5 ">
       <h1 class="text-center font-semibold underline">Area calculation</h1>
+
+      <div class="mt-5 text-center space-y-4">
+        <p id="result"></p>
+      </div>
     </div>
   </main>
 
