@@ -1,3 +1,9 @@
+function deleteAll() {
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("result2").innerHTML = "";
+  document.getElementById("result3").innerHTML = "";
+}
+
 // triangle calculation
 
 function triangleCalculate() {
@@ -12,11 +18,7 @@ function triangleCalculate() {
   if (triangleBase.value > 0 && triangleHeight.value > 0) {
     if (base && height) {
       result.innerHTML = `Triangle-Area: ${area} <span>cm<sup>2</sup></span>`;
-    } else {
-      result.innerHTML = "";
     }
-  } else {
-    result.innerHTML = "";
   }
 
   // clear the input
@@ -30,21 +32,38 @@ function rectangleCalculation() {
   const width = rectangleWidth.value;
   const rectangleLength = document.getElementById("rectangleLength");
   const length = rectangleLength.value;
-  const result = document.getElementById("result");
+  const result = document.getElementById("result2");
 
   const area = width * length;
 
   if (rectangleWidth.value > 0 && rectangleLength.value > 0) {
     if (width && length) {
-      result.innerHTML = `Triangle-Area: ${area} <span>cm<sup>2</sup></span>`;
-    } else {
-      result.innerHTML = "";
+      result.innerHTML = `Rectangle-Area: ${area} <span>cm<sup>2</sup></span>`;
     }
-  } else {
-    result.innerHTML = "";
   }
 
   // clear the input
   rectangleWidth.value = "";
   rectangleLength.value = "";
+}
+
+// parallelogram calculation
+function parallelogramCalculation() {
+  const parallelogramBase = document.getElementById("parallelogramBase");
+  const base = parallelogramBase.value;
+  const parallelogramHeight = document.getElementById("parallelogramHeight");
+  const height = parallelogramHeight.value;
+  const result = document.getElementById("result3");
+
+  const area = base * height;
+
+  if (parallelogramBase.value > 0 && parallelogramHeight.value > 0) {
+    if (base && height) {
+      result.innerHTML = `Rectangle-Area: ${area} <span>cm<sup>2</sup></span>`;
+    }
+  }
+
+  // clear the input
+  parallelogramBase.value = "";
+  parallelogramHeight.value = "";
 }

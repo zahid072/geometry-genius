@@ -9,19 +9,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<style>
-  jahid {
-    color: #1090d81a;
-  }
-</style>
-
 <body>
 
   <header>
-    <div class="navbar bg-[#1090d81a]">
+    <div class="navbar bg-[#1090d81a] px-12">
       <div class="navbar-start">
-        <a class="btn btn-ghost text-xl"><span class="font-bold text-2xl">Interactive </span>
-          Geometry Genius</a>
+        <div class=" text-xl"><span class="font-bold text-2xl">Interactive </span><br>
+          Geometry Genius</div>
       </div>
       <div class="navbar-end">
         <a class="btn btn-primary">Blog</a>
@@ -63,7 +57,7 @@
               <span>cm</span>
             </label>
             <label for="">
-              <input id="rectangleLength" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="l">
+              <input id="rectangleLength" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="L">
               <span>cm</span>
             </label>
           </div>
@@ -77,19 +71,20 @@
         <figure><img src="./images/parallelogram.png" alt="Shoes" /></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Parallelogram</h2>
-          <p>Area (A) = b * h</p>
+          <p>Area (A) = b x h</p>
           <div class="flex gap-2">
             <label for="">
-              <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
+              <input id="parallelogramBase" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
               <span>cm</span>
             </label>
             <label for="">
-              <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="h">
+              <input id="parallelogramHeight" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]"
+                placeholder="h">
               <span>cm</span>
             </label>
           </div>
           <div class="card-actions justify-end mt-6 w-full">
-            <button class="btn btn-primary w-full text-xl">Calculate</button>
+            <button onclick="parallelogramCalculation()" class="btn btn-primary w-full text-xl">Calculate</button>
           </div>
         </div>
       </div>
@@ -98,7 +93,7 @@
         <figure><img src="./images/rhombus.png" alt="Shoes" /></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Rhombus</h2>
-          <p>Area (A) = 0.5 b h</p>
+          <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
           <div class="flex gap-2">
             <label for="">
               <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
@@ -119,7 +114,7 @@
         <figure><img src="./images/pentagon.png" alt="Shoes" /></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Pentagon</h2>
-          <p>Area (A) = 0.5 b h</p>
+          <p>Area (A) = 0.5 x p x b</p>
           <div class="flex gap-2">
             <label for="">
               <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
@@ -140,7 +135,7 @@
         <figure><img src="./images/ellipse.png" alt="Shoes" /></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Ellipse</h2>
-          <p>Area (A) = 0.5 b h</p>
+          <p>Area (A) = π x a x b</p>
           <div class="flex gap-2">
             <label for="">
               <input type="text" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
@@ -159,10 +154,14 @@
 
     </div>
     <div class="border rounded-xl p-5 ">
-      <h1 class="text-center font-semibold underline">Area calculation</h1>
+      <button onclick="deleteAll()" class="btn btn-error">Clear</button>
+      <h1 class="text-center font-semibold underline inline ml-8">Area calculation</h1>
 
       <div class="mt-5 text-center space-y-4">
         <p id="result"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+
       </div>
     </div>
   </main>
