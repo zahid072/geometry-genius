@@ -87,3 +87,23 @@ function rhombusCalculation() {
   d1.value = "";
   d2.value = "";
 }
+//  pentagon calculation
+function pentagonCalculation() {
+  const pentagonP = document.getElementById("pentagonP");
+  const p = pentagonP.value;
+  const pentagonB = document.getElementById("pentagonB");
+  const b = pentagonB.value;
+  const result = document.getElementById("result5");
+
+  const area = 0.5 * p * b;
+
+  if (pentagonP.value > 0 && pentagonB.value > 0) {
+    if (p && b) {
+      result.innerHTML = `Pentagon-Area: ${area} <span>cm<sup>2</sup></span>`;
+    }
+  }
+
+  // clear the input
+  p.value = "";
+  b.value = "";
+}
