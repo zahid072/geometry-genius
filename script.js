@@ -59,11 +59,31 @@ function parallelogramCalculation() {
 
   if (parallelogramBase.value > 0 && parallelogramHeight.value > 0) {
     if (base && height) {
-      result.innerHTML = `Rectangle-Area: ${area} <span>cm<sup>2</sup></span>`;
+      result.innerHTML = `Parallelogram-Area: ${area} <span>cm<sup>2</sup></span>`;
     }
   }
 
   // clear the input
   parallelogramBase.value = "";
   parallelogramHeight.value = "";
+}
+// rhombus calculation
+function rhombusCalculation() {
+  const d1 = document.getElementById("rhombusD1");
+  const rhombusD1 = d1.value;
+  const d2 = document.getElementById("rhombusD2");
+  const rhombusD2 = d2.value;
+  const result = document.getElementById("result4");
+
+  const area = 0.5 * rhombusD1 * rhombusD2;
+
+  if (d1.value > 0 && d2.value > 0) {
+    if (rhombusD1 && rhombusD2) {
+      result.innerHTML = `Rhombus-Area: ${area} <span>cm<sup>2</sup></span>`;
+    }
+  }
+
+  // clear the input
+  d1.value = "";
+  d2.value = "";
 }
