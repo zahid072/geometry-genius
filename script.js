@@ -34,5 +34,5 @@ function pentagonCalculation() {
 }
 //  Ellipse calculation
 function ellipseCalculation() {
-  calculation("ellipseA", "ellipseB", "result6", "Ellipse", 3.14);
+  calculation("ellipseA", "ellipseB", "result6", "Ellipse", Math.round(Math.PI));
 }
