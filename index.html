@@ -138,16 +138,16 @@
           <p>Area (A) = π x a x b</p>
           <div class="flex gap-2">
             <label for="">
-              <input type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
+              <input  id="ellipseA" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="a">
               <span>cm</span>
             </label>
             <label for="">
-              <input type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="h">
+              <input id="ellipseB" type="number" class="w-20 px-2 bg-slate-200 rounded-[4px]" placeholder="b">
               <span>cm</span>
             </label>
           </div>
           <div class="card-actions justify-end mt-6 w-full">
-            <button class="btn btn-primary w-full text-xl">Calculate</button>
+            <button onclick="ellipseCalculation()" class="btn btn-primary w-full text-xl">Calculate</button>
           </div>
         </div>
       </div>
@@ -163,6 +163,7 @@
         <p id="result3"></p>
         <p id="result4"></p>
         <p id="result5"></p>
+        <p id="result6"></p>
 
       </div>
     </div>

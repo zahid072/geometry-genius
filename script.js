@@ -107,3 +107,24 @@ function pentagonCalculation() {
   p.value = "";
   b.value = "";
 }
+//  Ellipse calculation
+function ellipseCalculation() {
+  const EllipseA = document.getElementById("ellipseA");
+  const a = EllipseA.value;
+  const EllipseB = document.getElementById("ellipseB");
+  const b = EllipseB.value;
+  const result = document.getElementById("result6");
+
+  const area = Math.PI * a * b;
+  const roundArea = Math.round(area);
+
+  if (EllipseA.value > 0 && EllipseB.value > 0) {
+    if (a && b) {
+      result.innerHTML = `Ellipse-Area: ${roundArea} <span>cm<sup>2</sup></span>`;
+    }
+  }
+
+  // clear the input
+  a.value = "";
+  b.value = "";
+}
